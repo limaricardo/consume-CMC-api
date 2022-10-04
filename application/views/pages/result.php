@@ -8,9 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="<?= base_url() ?>search" method="post">
-        <input class="search" type="text" name="search" id="search" placeholder="Search" value="">
-        <?php var_dump("oi") ?>
-    </form>
+    <div>
+        <?= $result ?>
+    </div>
 </body>
 </html>
