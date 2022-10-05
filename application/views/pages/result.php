@@ -5,11 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="<?= base_url() ?>css/style.css" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <?= $result ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4><?php echo $result[$term]['id'] ?> - (<?php echo $result['data'][$term]['symbol'] ?>)</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Max supply <b class="text-right"><?php echo $result['data'] ?></b></li>
+                            <li class="list-group-item">Circulating supply <b class="text-right"><?php echo $result['data'] ?></b></li>
+                            <li class="list-group-item">Total supply <b class="text-right"><?php echo $result['data'] ?></b></li>
+                            <li class="list-group-item">CMC supply <b class="text-right"><?php echo $result['data'] ?></b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

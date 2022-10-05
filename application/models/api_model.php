@@ -2,7 +2,7 @@
 
 class Api_model extends CI_Model {
 
-    public function search($symbol)
+    public function busca($symbol,$term)
     {
         if(empty($symbol))
         {
@@ -36,7 +36,12 @@ class Api_model extends CI_Model {
         $response = curl_exec($curl); // Send the request, save the response
         // print_r(json_decode($response)); // print json decoded response
         curl_close($curl); // Close request
+        $result = json_decode($response);
 
-        return $response;
+        echo '<pre>';
+        print_r($result->data->$term[0]->id);
+        echo '</pre>';
+        exit;
+        // return $result;
     }
 }
