@@ -15,14 +15,14 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h4><?php echo $result[$term]['id'] ?> - (<?php echo $result['data'][$term]['symbol'] ?>)</h4>
+                        <h4><?php echo $result->name ?> - <?php echo $result->symbol ?></h4>
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
-                            <li class="list-group-item">Max supply <b class="text-right"><?php echo $result['data'] ?></b></li>
-                            <li class="list-group-item">Circulating supply <b class="text-right"><?php echo $result['data'] ?></b></li>
-                            <li class="list-group-item">Total supply <b class="text-right"><?php echo $result['data'] ?></b></li>
-                            <li class="list-group-item">CMC supply <b class="text-right"><?php echo $result['data'] ?></b></li>
+                            <li class="list-group-item">Max supply <b class="text-right"><?php echo $result->max_supply ?></b></li>
+                            <li class="list-group-item">Circulating supply <b class="text-right"><?php echo $result->circulating_supply ?></b></li>
+                            <li class="list-group-item">Total supply <b class="text-right"><?php echo $result->total_supply ?></b></li>
+                            <li class="list-group-item">CMC rank <b class="text-right"><?php echo $result->cmc_rank ?></b></li>
                         </ul>
                     </div>
                 </div>

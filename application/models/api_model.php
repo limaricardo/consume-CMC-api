@@ -37,11 +37,20 @@ class Api_model extends CI_Model {
         // print_r(json_decode($response)); // print json decoded response
         curl_close($curl); // Close request
         $result = json_decode($response);
+        $result = $result->data->$term[0];
+        return $result;
 
-        echo '<pre>';
-        print_r($result->data->$term[0]->id);
-        echo '</pre>';
-        exit;
-        // return $result;
+        // echo '<pre>';
+        // print_r($result);
+        // print_r($result->data);
+        // print_r($result->data->$term[0]->id);
+        // print_r($result->data->$term[0]->name);
+        // print_r($result->data->$term[0]->symbol);
+        // print_r($result->data->$term[0]->max_supply);
+        // print_r($result->data->$term[0]->circulating_supply);
+        // print_r($result->data->$term[0]->total_supply);
+        // echo '</pre>';
+        // exit;
+        
     }
 }

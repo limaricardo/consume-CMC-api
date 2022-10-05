@@ -13,7 +13,6 @@ class Search extends CI_Controller {
 		$term = implode($_POST);
 		$term = strtoupper($term);
 		$data["result"] = $this->api_model->busca($_POST, $term);
-		$data["term"] = $term;
 		
 
 		$this->load->view('pages/result', $data);
