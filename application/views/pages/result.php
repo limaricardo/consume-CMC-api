@@ -15,7 +15,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <h4><?php echo $result->name ?> - <?php echo $result->symbol ?></h4>
+                        <h4><?php echo $result->name ?> - <?php echo number_format((float)$result->quote->USD->price, 2, '.', '') ?></h4>
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
